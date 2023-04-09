@@ -7,21 +7,22 @@ from airflow.operators.python_operator import PythonOperator
 
 def greet():
     print('Writing in file')
+    msg = 'Greeted: '
     with open('greet.txt', 'a+', encoding='utf8') as f:
-        print(f.read())
+        msg += f.read()
         now = dt.datetime.now()
         t = now.strftime("%Y-%m-%d %H:%M")
         f.write(str(t) + '\n')
-    return 'Greeted'
+    return msg
 
 
-def respond():
+def greet_again():
     return 'Greet Responded Again'
 
 
 default_args = {
     'owner': 'airflow',
-    'start_date': dt.datetime(2023, 1, 1, 10, 00, 00),
+    'start_date': dt.datetime(2023, 4, 7, 10, 00, 00),
     'concurrency': 1,
     'retries': 2
 }
@@ -32,15 +33,15 @@ with DAG('io_resto_casa',
          schedule_interval='*/10 * * * *',
          # schedule_interval=None,
          ) as dag:
-    opr_hello = BashOperator(task_id='say_Hi',
+    opr_init = BashOperator(task_id='init',
                              bash_command='echo "Doing Hi in Italian!!"')
 
     opr_greet = PythonOperator(task_id='greet',
                                python_callable=greet)
-    opr_sleep = BashOperator(task_id='sleep_me',
+    opr_sleep = BashOperator(task_id='sleep',
                              bash_command='sleep 5')
 
-    opr_respond = PythonOperator(task_id='respond',
-                                 python_callable=respond)
+    opr_greet_again = PythonOperator(task_id='greet_again',
+                                 python_callable=greet_again)
 
-opr_hello >> opr_greet >> opr_sleep >> opr_respond
+opr_init >> opr_greet >> opr_sleep >> opr_greet_again
