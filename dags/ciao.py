@@ -3,6 +3,7 @@ import datetime as dt
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
+from custom_operator.greet_operator import GreetOperator
 
 
 def greet():
@@ -17,7 +18,7 @@ def greet():
 
 
 def greet_again():
-    return 'Greet Responded Again'
+    return 'Greet responded again through custom operator'
 
 
 default_args = {
@@ -41,7 +42,7 @@ with DAG('io_resto_casa',
     opr_sleep = BashOperator(task_id='sleep',
                              bash_command='sleep 5')
 
-    opr_greet_again = PythonOperator(task_id='greet_again',
-                                 python_callable=greet_again)
+    opr_greet_again = GreetOperator(task_id='greet_again',
+                                 msg=greet_again)
 
 opr_init >> opr_greet >> opr_sleep >> opr_greet_again

@@ -57,7 +57,7 @@ def test_sleep_task(dagbag):
 def test_greet_again_task(dagbag):
     dag = dagbag.get_dag(dag_id="io_resto_casa")
     greet_again_task = get_task(dag, "greet_again")
-    assert greet_again_task.task_type == 'PythonOperator'
+    assert greet_again_task.task_type == 'GreetOperator'
     assert len(greet_again_task.upstream_task_ids) == 1
     assert sorted(greet_again_task.upstream_task_ids) == sorted({'sleep'}) # Only triggered by sleep
     assert len(greet_again_task.downstream_task_ids) == 0 # Last  task

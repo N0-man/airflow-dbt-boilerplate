@@ -1,9 +1,14 @@
 # Airflow - Boilerplate
 ![CI](https://github.com/N0-man/airflow-dbt-boilerplate/actions/workflows/ci.yml/badge.svg)
 
-This repo contains example Airflow DAGs with various unit tests to show how you can implement automated testing of your DAGs.
-
-DAG validation tests are written using `pytest`
+This repo contains 
+* Example Airflow DAGs. Unit tests coverage includes
+    - Verify import errors
+    - Veriry dag config such as retry count
+    - Verify if the dag is loaded with requried tasks
+    - Verify each task, its operator and its upstream and downstream dependencies are as expected
+* Example custom operator with unit test
+    - Verify response from custom operator
 
 ### Prerequisite
 * [Docker](https://docs.docker.com/get-docker/) 
