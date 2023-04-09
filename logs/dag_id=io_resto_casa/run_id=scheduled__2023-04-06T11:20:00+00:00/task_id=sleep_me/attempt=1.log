@@ -1,0 +1,80 @@
+[2023-04-06T12:50:51.196+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: io_resto_casa.sleep_me scheduled__2023-04-06T11:20:00+00:00 [queued]>
+[2023-04-06T12:50:51.781+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: io_resto_casa.sleep_me scheduled__2023-04-06T11:20:00+00:00 [queued]>
+[2023-04-06T12:50:51.791+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T12:50:51.804+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 3
+[2023-04-06T12:50:51.822+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T12:50:52.774+0000] {taskinstance.py:1309} INFO - Executing <Task(BashOperator): sleep_me> on 2023-04-06 11:20:00+00:00
+[2023-04-06T12:50:53.204+0000] {standard_task_runner.py:55} INFO - Started process 13100 to run task
+[2023-04-06T12:50:53.965+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'io_resto_casa', 'sleep_me', 'scheduled__2023-04-06T11:20:00+00:00', '--job-id', '241', '--raw', '--subdir', 'DAGS_FOLDER/ciao.py', '--cfg-path', '/tmp/tmp44lcnmks']
+[2023-04-06T12:50:54.131+0000] {standard_task_runner.py:83} INFO - Job 241: Subtask sleep_me
+[2023-04-06T14:29:37.729+0000] {task_command.py:389} INFO - Running <TaskInstance: io_resto_casa.sleep_me scheduled__2023-04-06T11:20:00+00:00 [running]> on host cfece00ff772
+[2023-04-06T14:29:47.212+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2023-04-06T14:29:50.177+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 13100. PIDs of all processes in the group: [13100]
+[2023-04-06T14:29:50.534+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 13100
+[2023-04-06T14:29:50.670+0000] {taskinstance.py:1488} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-04-06T14:29:51.200+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2023-04-06T14:29:51.332+0000] {abstractoperator.py:615} ERROR - Exception rendering Jinja template for task 'sleep_me', field 'bash_command'. Template: 'sleep 5'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 607, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 661, in render_template
+    template = jinja_env.from_string(value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1105, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 761, in compile
+    source = self._generate(source, name, filename, defer_init=defer_init)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 695, in _generate
+    optimized=self.optimized,
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 117, in generate
+    generator.visit(node)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/visitor.py", line 40, in visit
+    return f(node, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 871, in visit_Template
+    f"{self.func('root')}(context, missing=missing{envenv}):", extra=1
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 609, in func
+    return f"{self.choose_async()}def {name}"
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 606, in choose_async
+    return async_value if self.environment.is_async else sync_value
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1490, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-04-06T14:29:55.944+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1383, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1502, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2123, in render_templates
+    original_task.render_template_fields(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1179, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 75, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 607, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 661, in render_template
+    template = jinja_env.from_string(value)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 1105, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 761, in compile
+    source = self._generate(source, name, filename, defer_init=defer_init)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/environment.py", line 695, in _generate
+    optimized=self.optimized,
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 117, in generate
+    generator.visit(node)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/visitor.py", line 40, in visit
+    return f(node, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 871, in visit_Template
+    f"{self.func('root')}(context, missing=missing{envenv}):", extra=1
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 609, in func
+    return f"{self.choose_async()}def {name}"
+  File "/home/airflow/.local/lib/python3.7/site-packages/jinja2/compiler.py", line 606, in choose_async
+    return async_value if self.environment.is_async else sync_value
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1490, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-04-06T14:29:56.343+0000] {taskinstance.py:1332} INFO - Marking task as UP_FOR_RETRY. dag_id=io_resto_casa, task_id=sleep_me, execution_date=20230406T112000, start_date=20230406T125051, end_date=20230406T142956
+[2023-04-06T14:30:01.230+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 241 for task sleep_me (Task received SIGTERM signal; 13100)
+[2023-04-06T14:30:03.156+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=13100, status='terminated', exitcode=1, started='12:50:52') (13100) terminated with exit code 1

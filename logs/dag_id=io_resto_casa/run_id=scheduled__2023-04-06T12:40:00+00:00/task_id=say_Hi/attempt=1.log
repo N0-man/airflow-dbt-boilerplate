@@ -1,0 +1,15 @@
+[2023-04-08T07:06:41.143+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: io_resto_casa.say_Hi scheduled__2023-04-06T12:40:00+00:00 [queued]>
+[2023-04-08T07:06:42.588+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: io_resto_casa.say_Hi scheduled__2023-04-06T12:40:00+00:00 [queued]>
+[2023-04-08T07:06:42.597+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-08T07:06:42.618+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 3
+[2023-04-08T07:06:42.744+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-08T07:06:47.560+0000] {taskinstance.py:1309} INFO - Executing <Task(BashOperator): say_Hi> on 2023-04-06 12:40:00+00:00
+[2023-04-08T07:06:48.295+0000] {standard_task_runner.py:55} INFO - Started process 13239 to run task
+[2023-04-08T07:06:49.175+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'io_resto_casa', 'say_Hi', 'scheduled__2023-04-06T12:40:00+00:00', '--job-id', '246', '--raw', '--subdir', 'DAGS_FOLDER/ciao.py', '--cfg-path', '/tmp/tmpnp7n0xp4']
+[2023-04-08T07:06:51.523+0000] {standard_task_runner.py:83} INFO - Job 246: Subtask say_Hi
+[2023-04-08T07:07:03.884+0000] {local_task_job.py:277} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2023-04-08T07:07:04.170+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 13239. PIDs of all processes in the group: [13239]
+[2023-04-08T07:07:05.123+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 13239
+[2023-04-08T07:07:07.538+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=13239, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='07:06:47') (13239) terminated with exit code Negsignal.SIGTERM

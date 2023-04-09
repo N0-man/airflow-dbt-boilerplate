@@ -1,0 +1,33 @@
+[2023-04-06T03:23:19.538+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: io_resto_casa.greet manual__2023-04-06T03:23:14.084927+00:00 [queued]>
+[2023-04-06T03:23:19.552+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: io_resto_casa.greet manual__2023-04-06T03:23:14.084927+00:00 [queued]>
+[2023-04-06T03:23:19.554+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T03:23:19.555+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-06T03:23:19.557+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T03:23:19.578+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): greet> on 2023-04-06 03:23:14.084927+00:00
+[2023-04-06T03:23:19.588+0000] {standard_task_runner.py:55} INFO - Started process 587 to run task
+[2023-04-06T03:23:19.593+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'io_resto_casa', 'greet', 'manual__2023-04-06T03:23:14.084927+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/ciao.py', '--cfg-path', '/tmp/tmpizxlfmyp']
+[2023-04-06T03:23:19.598+0000] {standard_task_runner.py:83} INFO - Job 30: Subtask greet
+[2023-04-06T03:23:19.712+0000] {task_command.py:389} INFO - Running <TaskInstance: io_resto_casa.greet manual__2023-04-06T03:23:14.084927+00:00 [running]> on host cfece00ff772
+[2023-04-06T03:23:19.817+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=io_resto_casa
+AIRFLOW_CTX_TASK_ID=greet
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-06T03:23:14.084927+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-04-06T03:23:14.084927+00:00
+[2023-04-06T03:23:19.821+0000] {logging_mixin.py:137} INFO - Writing in file
+[2023-04-06T03:23:19.823+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ciao.py", line 14, in greet
+    print(f.read())
+ValueError: I/O operation on closed file.
+[2023-04-06T03:23:19.836+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=io_resto_casa, task_id=greet, execution_date=20230406T032314, start_date=20230406T032319, end_date=20230406T032319
+[2023-04-06T03:23:19.850+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 30 for task greet (I/O operation on closed file.; 587)
+[2023-04-06T03:23:19.888+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-04-06T03:23:19.928+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

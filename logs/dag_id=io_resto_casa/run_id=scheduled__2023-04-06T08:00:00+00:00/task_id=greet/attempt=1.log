@@ -1,0 +1,24 @@
+[2023-04-06T08:10:03.185+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: io_resto_casa.greet scheduled__2023-04-06T08:00:00+00:00 [queued]>
+[2023-04-06T08:10:03.195+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: io_resto_casa.greet scheduled__2023-04-06T08:00:00+00:00 [queued]>
+[2023-04-06T08:10:03.196+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T08:10:03.198+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 3
+[2023-04-06T08:10:03.198+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T08:10:03.213+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): greet> on 2023-04-06 08:00:00+00:00
+[2023-04-06T08:10:03.219+0000] {standard_task_runner.py:55} INFO - Started process 7824 to run task
+[2023-04-06T08:10:03.223+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'io_resto_casa', 'greet', 'scheduled__2023-04-06T08:00:00+00:00', '--job-id', '156', '--raw', '--subdir', 'DAGS_FOLDER/ciao.py', '--cfg-path', '/tmp/tmp51nhm7p9']
+[2023-04-06T08:10:03.227+0000] {standard_task_runner.py:83} INFO - Job 156: Subtask greet
+[2023-04-06T08:10:03.316+0000] {task_command.py:389} INFO - Running <TaskInstance: io_resto_casa.greet scheduled__2023-04-06T08:00:00+00:00 [running]> on host cfece00ff772
+[2023-04-06T08:10:03.401+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=io_resto_casa
+AIRFLOW_CTX_TASK_ID=greet
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-06T08:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-06T08:00:00+00:00
+[2023-04-06T08:10:03.404+0000] {logging_mixin.py:137} INFO - Writing in file
+[2023-04-06T08:10:03.406+0000] {python.py:177} INFO - Done. Returned value was: Greeted
+[2023-04-06T08:10:03.434+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=io_resto_casa, task_id=greet, execution_date=20230406T080000, start_date=20230406T081003, end_date=20230406T081003
+[2023-04-06T08:10:03.477+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-06T08:10:03.516+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,36 @@
+[2023-04-07T22:53:05.366+0000] {processor.py:153} INFO - Started process (PID=48286) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2023-04-07T22:53:05.575+0000] {processor.py:743} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2023-04-07T22:53:05.650+0000] {logging_mixin.py:137} INFO - [2023-04-07T22:53:05.648+0000] {dagbag.py:532} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2023-04-07T22:53:11.266+0000] {logging_mixin.py:137} INFO - [2023-04-07T22:53:11.253+0000] {taskmixin.py:211} WARNING - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex
+[2023-04-08T01:00:27.760+0000] {logging_mixin.py:137} INFO - [2023-04-07T22:53:24.883+0000] {taskmixin.py:211} WARNING - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex
+[2023-04-08T01:00:28.505+0000] {logging_mixin.py:137} INFO - [2023-04-08T01:00:28.448+0000] {taskmixin.py:211} WARNING - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex
+[2023-04-08T01:00:28.577+0000] {logging_mixin.py:137} INFO - [2023-04-08T01:00:28.576+0000] {taskmixin.py:211} WARNING - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex
+[2023-04-08T01:00:28.704+0000] {logging_mixin.py:137} INFO - [2023-04-08T01:00:28.703+0000] {taskmixin.py:211} WARNING - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex
+[2023-04-08T01:00:28.852+0000] {logging_mixin.py:137} INFO - [2023-04-08T01:00:28.851+0000] {taskmixin.py:211} WARNING - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex
+[2023-04-08T01:00:30.909+0000] {logging_mixin.py:137} INFO - [2023-04-08T01:00:30.902+0000] {timeout.py:68} ERROR - Process timed out, PID: 48286
+[2023-04-08T01:00:33.158+0000] {logging_mixin.py:137} INFO - [2023-04-08T01:00:31.205+0000] {dagbag.py:341} ERROR - Failed to import: /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 337, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py", line 206, in <module>
+    create_entry_gcs >> lookup_entry >> delete_entry
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 87, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 236, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 192, in _set_relatives
+    dags: set[DAG] = {task.dag for task in [*self.roots, *task_list] if task.has_dag() and task.dag}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskmixin.py", line 192, in <setcomp>
+    dags: set[DAG] = {task.dag for task in [*self.roots, *task_list] if task.has_dag() and task.dag}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 692, in __hash__
+    val = tuple(self.task_dict.keys())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.5.3/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.5.3/best-practices.html#reducing-dag-complexity, PID: 48286
+[2023-04-08T01:00:33.707+0000] {processor.py:755} WARNING - No viable dags retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2023-04-08T01:00:39.255+0000] {processor.py:175} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py took 40.874 seconds

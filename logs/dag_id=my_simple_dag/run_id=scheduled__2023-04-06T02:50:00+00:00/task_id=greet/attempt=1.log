@@ -1,0 +1,33 @@
+[2023-04-06T03:07:18.164+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_simple_dag.greet scheduled__2023-04-06T02:50:00+00:00 [queued]>
+[2023-04-06T03:07:18.185+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_simple_dag.greet scheduled__2023-04-06T02:50:00+00:00 [queued]>
+[2023-04-06T03:07:18.187+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T03:07:18.188+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 1
+[2023-04-06T03:07:18.190+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T03:07:18.216+0000] {taskinstance.py:1309} INFO - Executing <Task(PythonOperator): greet> on 2023-04-06 02:50:00+00:00
+[2023-04-06T03:07:18.224+0000] {standard_task_runner.py:55} INFO - Started process 88 to run task
+[2023-04-06T03:07:18.230+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'my_simple_dag', 'greet', 'scheduled__2023-04-06T02:50:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/ciao.py', '--cfg-path', '/tmp/tmpj00lgb42']
+[2023-04-06T03:07:18.236+0000] {standard_task_runner.py:83} INFO - Job 6: Subtask greet
+[2023-04-06T03:07:18.348+0000] {task_command.py:389} INFO - Running <TaskInstance: my_simple_dag.greet scheduled__2023-04-06T02:50:00+00:00 [running]> on host cfece00ff772
+[2023-04-06T03:07:18.455+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=my_simple_dag
+AIRFLOW_CTX_TASK_ID=greet
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-06T02:50:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-06T02:50:00+00:00
+[2023-04-06T03:07:18.459+0000] {logging_mixin.py:137} INFO - Writing in file
+[2023-04-06T03:07:18.474+0000] {taskinstance.py:1776} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ciao.py", line 10, in greet
+    with open('/Development/airflow_tutorial/greet.txt', 'a+', encoding='utf8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/Development/airflow_tutorial/greet.txt'
+[2023-04-06T03:07:18.492+0000] {taskinstance.py:1332} INFO - Marking task as FAILED. dag_id=my_simple_dag, task_id=greet, execution_date=20230406T025000, start_date=20230406T030718, end_date=20230406T030718
+[2023-04-06T03:07:18.514+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 6 for task greet ([Errno 2] No such file or directory: '/Development/airflow_tutorial/greet.txt'; 88)
+[2023-04-06T03:07:18.563+0000] {local_task_job.py:212} INFO - Task exited with return code 1
+[2023-04-06T03:07:18.601+0000] {taskinstance.py:2596} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,27 @@
+[2023-04-06T09:50:05.660+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: io_resto_casa.sleep_me scheduled__2023-04-06T09:40:00+00:00 [queued]>
+[2023-04-06T09:50:05.679+0000] {taskinstance.py:1090} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: io_resto_casa.sleep_me scheduled__2023-04-06T09:40:00+00:00 [queued]>
+[2023-04-06T09:50:05.681+0000] {taskinstance.py:1288} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T09:50:05.683+0000] {taskinstance.py:1289} INFO - Starting attempt 1 of 3
+[2023-04-06T09:50:05.684+0000] {taskinstance.py:1290} INFO - 
+--------------------------------------------------------------------------------
+[2023-04-06T09:50:05.708+0000] {taskinstance.py:1309} INFO - Executing <Task(BashOperator): sleep_me> on 2023-04-06 09:40:00+00:00
+[2023-04-06T09:50:05.717+0000] {standard_task_runner.py:55} INFO - Started process 10519 to run task
+[2023-04-06T09:50:05.722+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'io_resto_casa', 'sleep_me', 'scheduled__2023-04-06T09:40:00+00:00', '--job-id', '197', '--raw', '--subdir', 'DAGS_FOLDER/ciao.py', '--cfg-path', '/tmp/tmpekcs68i3']
+[2023-04-06T09:50:05.727+0000] {standard_task_runner.py:83} INFO - Job 197: Subtask sleep_me
+[2023-04-06T09:50:05.845+0000] {task_command.py:389} INFO - Running <TaskInstance: io_resto_casa.sleep_me scheduled__2023-04-06T09:40:00+00:00 [running]> on host cfece00ff772
+[2023-04-06T09:50:05.958+0000] {taskinstance.py:1518} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=io_resto_casa
+AIRFLOW_CTX_TASK_ID=sleep_me
+AIRFLOW_CTX_EXECUTION_DATE=2023-04-06T09:40:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-04-06T09:40:00+00:00
+[2023-04-06T09:50:05.962+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-04-06T09:50:05.964+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sleep 5']
+[2023-04-06T09:50:05.989+0000] {subprocess.py:86} INFO - Output:
+[2023-04-06T09:50:10.994+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-04-06T09:50:11.043+0000] {taskinstance.py:1332} INFO - Marking task as SUCCESS. dag_id=io_resto_casa, task_id=sleep_me, execution_date=20230406T094000, start_date=20230406T095005, end_date=20230406T095011
+[2023-04-06T09:50:11.105+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-04-06T09:50:11.146+0000] {taskinstance.py:2596} INFO - 1 downstream tasks scheduled from follow-on schedule check

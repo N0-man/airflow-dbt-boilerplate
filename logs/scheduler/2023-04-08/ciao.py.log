@@ -1,0 +1,171 @@
+[2023-04-08T07:06:16.191+0000] {processor.py:153} INFO - Started process (PID=48309) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T07:06:16.241+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T07:06:16.298+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:16.296+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T07:06:16.969+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T07:06:17.454+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:17.453+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T07:06:18.982+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:18.978+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T06:50:00+00:00, run_after=2023-04-08T07:00:00+00:00
+[2023-04-08T07:06:19.542+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 3.547 seconds
+[2023-04-08T07:06:51.298+0000] {processor.py:153} INFO - Started process (PID=48362) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T07:06:51.312+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T07:06:51.319+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:51.318+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T07:06:51.492+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T07:06:51.726+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:51.724+0000] {taskinstance.py:1778} ERROR - {'DAG Id': 'io_resto_casa', 'Task Id': 'say_Hi', 'Run Id': 'scheduled__2023-04-06T12:10:00+00:00', 'Hostname': 'cfece00ff772', 'External Executor Id': '7aa61641-67d7-4b30-bb02-d7201c12152f'}
+[2023-04-08T07:06:52.445+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:52.431+0000] {taskinstance.py:1332} INFO - Marking task as UP_FOR_RETRY. dag_id=io_resto_casa, task_id=say_Hi, execution_date=20230406T121000, start_date=20230408T070627, end_date=20230408T070651
+[2023-04-08T07:06:53.529+0000] {processor.py:713} INFO - Executed failure callback for <TaskInstance: io_resto_casa.say_Hi scheduled__2023-04-06T12:10:00+00:00 [up_for_retry]> in state up_for_retry
+[2023-04-08T07:06:53.646+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:53.645+0000] {taskinstance.py:1778} ERROR - {'DAG Id': 'io_resto_casa', 'Task Id': 'say_Hi', 'Run Id': 'scheduled__2023-04-06T12:40:00+00:00', 'Hostname': 'cfece00ff772', 'External Executor Id': '41b61771-8c14-4737-bf43-a4526f111d2b'}
+[2023-04-08T07:06:53.939+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:53.938+0000] {taskinstance.py:1332} INFO - Marking task as UP_FOR_RETRY. dag_id=io_resto_casa, task_id=say_Hi, execution_date=20230406T124000, start_date=20230408T070641, end_date=20230408T070653
+[2023-04-08T07:06:53.971+0000] {processor.py:713} INFO - Executed failure callback for <TaskInstance: io_resto_casa.say_Hi scheduled__2023-04-06T12:40:00+00:00 [up_for_retry]> in state up_for_retry
+[2023-04-08T07:06:53.989+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:53.989+0000] {taskinstance.py:1778} ERROR - {'DAG Id': 'io_resto_casa', 'Task Id': 'say_Hi', 'Run Id': 'scheduled__2023-04-06T12:50:00+00:00', 'Hostname': 'cfece00ff772', 'External Executor Id': 'b7f0105d-a0e4-4c3f-a6d2-464ccf717cee'}
+[2023-04-08T07:06:54.106+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:54.105+0000] {taskinstance.py:1332} INFO - Marking task as UP_FOR_RETRY. dag_id=io_resto_casa, task_id=say_Hi, execution_date=20230406T125000, start_date=20230408T070643, end_date=20230408T070654
+[2023-04-08T07:06:54.148+0000] {processor.py:713} INFO - Executed failure callback for <TaskInstance: io_resto_casa.say_Hi scheduled__2023-04-06T12:50:00+00:00 [up_for_retry]> in state up_for_retry
+[2023-04-08T07:06:54.393+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:54.392+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T07:06:54.721+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:06:54.721+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T07:00:00+00:00, run_after=2023-04-08T07:10:00+00:00
+[2023-04-08T07:06:54.859+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 3.617 seconds
+[2023-04-08T07:07:33.725+0000] {processor.py:153} INFO - Started process (PID=48413) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T07:07:33.732+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T07:07:33.734+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:07:33.734+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T07:07:33.931+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T07:07:34.136+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:07:34.135+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T07:07:34.299+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:07:34.299+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T07:00:00+00:00, run_after=2023-04-08T07:10:00+00:00
+[2023-04-08T07:07:34.451+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.751 seconds
+[2023-04-08T07:08:06.731+0000] {processor.py:153} INFO - Started process (PID=48463) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T07:08:06.742+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T07:08:06.751+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:08:06.751+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T07:08:06.996+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T07:08:07.229+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:08:07.227+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T07:08:07.393+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:08:07.393+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T07:00:00+00:00, run_after=2023-04-08T07:10:00+00:00
+[2023-04-08T07:08:07.489+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.802 seconds
+[2023-04-08T07:08:47.983+0000] {processor.py:153} INFO - Started process (PID=48513) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T07:08:47.995+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T07:08:48.014+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:08:48.012+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T07:08:48.148+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T07:08:48.242+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:08:48.242+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T07:08:48.364+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:08:48.361+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T07:00:00+00:00, run_after=2023-04-08T07:10:00+00:00
+[2023-04-08T07:08:48.449+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.478 seconds
+[2023-04-08T07:09:20.913+0000] {processor.py:153} INFO - Started process (PID=48566) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T07:09:20.922+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T07:09:20.926+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:09:20.926+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T07:09:21.169+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T07:09:21.438+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:09:21.438+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T07:09:21.742+0000] {logging_mixin.py:137} INFO - [2023-04-08T07:09:21.742+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T07:00:00+00:00, run_after=2023-04-08T07:10:00+00:00
+[2023-04-08T07:09:21.886+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 1.006 seconds
+[2023-04-08T08:05:08.498+0000] {processor.py:153} INFO - Started process (PID=48605) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T08:05:08.642+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T08:05:08.792+0000] {logging_mixin.py:137} INFO - [2023-04-08T08:05:08.782+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T08:05:16.182+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T08:05:31.142+0000] {logging_mixin.py:137} INFO - [2023-04-08T08:05:31.032+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T08:05:49.492+0000] {logging_mixin.py:137} INFO - [2023-04-08T08:05:49.325+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T07:50:00+00:00, run_after=2023-04-08T08:00:00+00:00
+[2023-04-08T08:06:05.026+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 57.419 seconds
+[2023-04-08T08:07:38.975+0000] {processor.py:153} INFO - Started process (PID=48678) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T08:07:38.989+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T08:07:38.999+0000] {logging_mixin.py:137} INFO - [2023-04-08T08:07:38.999+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T08:07:39.071+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T08:07:39.195+0000] {logging_mixin.py:137} INFO - [2023-04-08T08:07:39.194+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T08:07:39.333+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.367 seconds
+[2023-04-08T09:05:42.558+0000] {processor.py:153} INFO - Started process (PID=48730) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T09:05:42.662+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T09:05:42.919+0000] {logging_mixin.py:137} INFO - [2023-04-08T09:05:42.886+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T09:05:45.598+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T09:05:50.900+0000] {logging_mixin.py:137} INFO - [2023-04-08T09:05:50.895+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T09:06:06.248+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 24.214 seconds
+[2023-04-08T10:09:28.348+0000] {processor.py:153} INFO - Started process (PID=48811) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:09:28.399+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:09:28.420+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:09:28.420+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:09:28.728+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:09:29.777+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:09:29.776+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:09:30.070+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 1.784 seconds
+[2023-04-08T10:10:04.723+0000] {processor.py:153} INFO - Started process (PID=48863) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:10:04.735+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:10:04.749+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:10:04.749+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:10:04.885+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:10:05.080+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:10:05.079+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:10:05.614+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.908 seconds
+[2023-04-08T10:10:37.468+0000] {processor.py:153} INFO - Started process (PID=48919) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:10:37.475+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:10:37.479+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:10:37.478+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:10:37.610+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:10:37.808+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:10:37.808+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:10:37.993+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.549 seconds
+[2023-04-08T10:11:09.740+0000] {processor.py:153} INFO - Started process (PID=48962) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:11:09.765+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:11:09.778+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:11:09.777+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:11:10.145+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:11:10.566+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:11:10.560+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:11:10.987+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 1.311 seconds
+[2023-04-08T10:11:44.333+0000] {processor.py:153} INFO - Started process (PID=49003) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:11:44.341+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:11:44.349+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:11:44.348+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:11:44.526+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:11:45.342+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:11:45.308+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:11:46.541+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 2.254 seconds
+[2023-04-08T10:12:17.354+0000] {processor.py:153} INFO - Started process (PID=49052) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:12:17.362+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:12:17.366+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:12:17.366+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:12:17.415+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:12:17.524+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:12:17.523+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:12:17.780+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.456 seconds
+[2023-04-08T10:13:01.389+0000] {processor.py:153} INFO - Started process (PID=49103) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:13:01.395+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:13:01.402+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:13:01.401+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:13:01.584+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:13:02.065+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:13:02.064+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:13:02.444+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 1.081 seconds
+[2023-04-08T10:13:51.520+0000] {processor.py:153} INFO - Started process (PID=49152) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:13:51.537+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:13:51.552+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:13:51.551+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:13:51.693+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:13:51.979+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:13:51.979+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:13:53.485+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 1.999 seconds
+[2023-04-08T10:14:38.736+0000] {processor.py:153} INFO - Started process (PID=49204) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:14:38.749+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:14:38.769+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:14:38.755+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:14:39.056+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:14:39.422+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:14:39.421+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:14:40.228+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 1.540 seconds
+[2023-04-08T10:15:15.779+0000] {processor.py:153} INFO - Started process (PID=49254) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:15:15.787+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:15:15.797+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:15:15.794+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:15:15.973+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:15:16.260+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:15:16.258+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:15:16.653+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.899 seconds
+[2023-04-08T10:15:55.976+0000] {processor.py:153} INFO - Started process (PID=49311) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:15:56.014+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:15:56.021+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:15:56.021+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:15:56.147+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:15:56.309+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:15:56.309+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:15:56.597+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.636 seconds
+[2023-04-08T10:16:27.500+0000] {processor.py:153} INFO - Started process (PID=49361) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:16:27.508+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:16:27.513+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:16:27.512+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:16:27.596+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:16:27.681+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:16:27.680+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:16:27.850+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:16:27.849+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T10:10:00+00:00, run_after=2023-04-08T10:20:00+00:00
+[2023-04-08T10:16:27.949+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.474 seconds
+[2023-04-08T10:16:58.555+0000] {processor.py:153} INFO - Started process (PID=49428) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:16:58.558+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:16:58.560+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:16:58.560+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:16:58.583+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:16:58.625+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:16:58.625+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:16:58.670+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:16:58.670+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T10:10:00+00:00, run_after=2023-04-08T10:20:00+00:00
+[2023-04-08T10:16:58.700+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.153 seconds
+[2023-04-08T10:17:28.859+0000] {processor.py:153} INFO - Started process (PID=49479) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:17:28.862+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:17:28.864+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:17:28.864+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:17:28.886+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:17:28.923+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:17:28.923+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:17:28.965+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:17:28.965+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T10:10:00+00:00, run_after=2023-04-08T10:20:00+00:00
+[2023-04-08T10:17:28.995+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.146 seconds
+[2023-04-08T10:17:59.100+0000] {processor.py:153} INFO - Started process (PID=49530) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:17:59.102+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:17:59.104+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:17:59.104+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:17:59.125+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:17:59.164+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:17:59.163+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:17:59.202+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:17:59.202+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T10:10:00+00:00, run_after=2023-04-08T10:20:00+00:00
+[2023-04-08T10:17:59.227+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.133 seconds
+[2023-04-08T10:18:29.407+0000] {processor.py:153} INFO - Started process (PID=49581) to work on /opt/airflow/dags/ciao.py
+[2023-04-08T10:18:29.409+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ciao.py for tasks to queue
+[2023-04-08T10:18:29.411+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:18:29.411+0000] {dagbag.py:532} INFO - Filling up the DagBag from /opt/airflow/dags/ciao.py
+[2023-04-08T10:18:29.432+0000] {processor.py:753} INFO - DAG(s) dict_keys(['io_resto_casa']) retrieved from /opt/airflow/dags/ciao.py
+[2023-04-08T10:18:29.473+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:18:29.473+0000] {dag.py:2705} INFO - Sync 1 DAGs
+[2023-04-08T10:18:29.517+0000] {logging_mixin.py:137} INFO - [2023-04-08T10:18:29.516+0000] {dag.py:3456} INFO - Setting next_dagrun for io_resto_casa to 2023-04-08T10:10:00+00:00, run_after=2023-04-08T10:20:00+00:00
+[2023-04-08T10:18:29.546+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ciao.py took 0.145 seconds
